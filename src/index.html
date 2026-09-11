@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restore AI Windows — Reopen Your Claude Code Sessions After a Crash</title>
+<meta name="description" content="Restore AI Windows reopens your crashed Claude Code iTerm sessions and browser windows — tabs grouped into their original windows, on the exact virtual desktop, position, and size. Auto-snapshots in the background, restores at login." />
+<meta name="theme-color" content="#0A0B10" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Restore AI Windows — Reopen Your Claude Code Sessions After a Crash" />
+<meta property="og:description" content="Auto-snapshots your Claude Code sessions and browser windows, then restores them at login — grouped by project, on the right Space, position, and size." />
+<meta property="og:url" content="https://restoreaiwindows.theportlandcompany.com" />
+<meta property="og:image" content="https://restoreaiwindows.theportlandcompany.com/assets/app-icon.png" />
+<meta property="og:site_name" content="Restore AI Windows" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Restore AI Windows — Reopen Your Claude Code Sessions After a Crash" />
+<meta name="twitter:description" content="Auto-snapshots your Claude Code sessions and browser windows, then restores them at login — grouped by project, on the right Space, position, and size." />
+<meta name="twitter:image" content="https://restoreaiwindows.theportlandcompany.com/assets/app-icon.png" />
+<link rel="canonical" href="https://restoreaiwindows.theportlandcompany.com/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Restore AI Windows",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS",
+  "url": "https://restoreaiwindows.theportlandcompany.com/",
+  "description": "A macOS Dock app and launchd agent that snapshots and restores Claude Code iTerm sessions and browser windows after a crash, restart, or reboot — grouped by project, at their saved position, size, and virtual desktop.",
+  "image": "https://restoreaiwindows.theportlandcompany.com/assets/app-icon.png",
+  "publisher": { "@type": "Organization", "name": "The Portland Company", "url": "https://theportlandcompany.com" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+<link rel="icon" type="image/png" href="/assets/app-icon.png" />
+<link rel="apple-touch-icon" href="/assets/app-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div class="atmosphere" aria-hidden="true">
+  <div class="glow glow--a"></div>
+  <div class="glow glow--b"></div>
+  <div class="glow glow--c"></div>
+  <div class="grain"></div>
+</div>
+
+<!-- ====================== NAV ====================== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Restore AI Windows home">
+    <img src="/assets/app-icon.png" alt="" class="nav__icon" width="34" height="34" />
+    <span class="nav__name">Restore AI Windows</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#requirements">Requirements</a>
+  </nav>
+  <div class="nav__right">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" title="Toggle light / dark">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2l-1.7 1.7M6.9 17.1l-1.7 1.7"/></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M20 14.6A8 8 0 1 1 9.4 4 6.3 6.3 0 0 0 20 14.6Z" fill="currentColor"/></svg>
+        </span>
+      </span>
+    </button>
+    <a class="btn btn--ghost nav__cta" href="https://github.com/s3w47m88/claude-session-restorer/releases/latest" target="_blank" rel="noopener">Download</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ====================== HERO ====================== -->
+<section class="hero">
+  <div class="hero__copy reveal">
+    <span class="eyebrow"><span class="eyebrow__dot"></span> Auto-restores at every login</span>
+    <h1 class="hero__title">Your Claude Code sessions, back exactly where you left them.</h1>
+    <p class="hero__lede">
+      A crash, restart, or reboot doesn't have to cost you your terminal windows.
+      Restore AI Windows reopens your iTerm sessions <strong>and</strong> browser
+      windows — tabs grouped into their original windows, on the exact virtual
+      desktop, position, and size.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/releases/latest" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download DMG
+      </a>
+      <a class="btn btn--ghost" href="https://github.com/s3w47m88/claude-session-restorer" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+        View on GitHub
+      </a>
+    </div>
+    <p class="hero__note">
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      Free &amp; open source · macOS · iTerm2 required
+    </p>
+  </div>
+
+  <div class="sessions reveal" style="--d:.15s">
+    <div class="session-panel">
+      <div class="session-panel__head">
+        <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+        <span>restoring — last snapshot</span>
+      </div>
+
+      <div class="session-row">
+        <div class="session-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></div>
+        <div class="session-row__body">
+          <div class="session-row__label">politogy-nextjs</div>
+          <div class="session-row__meta">Space 2 · 1440×900</div>
+        </div>
+        <span class="session-status session-status--restored">restored</span>
+      </div>
+
+      <div class="session-row">
+        <div class="session-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></div>
+        <div class="session-row__body">
+          <div class="session-row__label">bartok-droplet</div>
+          <div class="session-row__meta">Space 1 · 1280×800</div>
+        </div>
+        <span class="session-status session-status--restored">restored</span>
+      </div>
+
+      <div class="session-row">
+        <div class="session-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--warn)" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></div>
+        <div class="session-row__body">
+          <div class="session-row__label">tpc-restore-ai-windows</div>
+          <div class="session-row__meta">resuming from summary…</div>
+        </div>
+        <span class="session-status session-status--pending">restoring</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== STRIP ====================== -->
+<section class="strip reveal">
+  <p class="strip__lead">Snapshot every 2 minutes. Restore in seconds.</p>
+  <ul class="strip__items">
+    <li><strong>iTerm</strong><span>+ browser windows</span></li>
+    <li><strong>Grouped</strong><span>by project</span></li>
+    <li><strong>Geometry</strong><span>position, size, Space</span></li>
+    <li><strong>Login</strong><span>auto-restore agent</span></li>
+  </ul>
+</section>
+
+<!-- ====================== FEATURE 1: SESSION GROUPING ====================== -->
+<section class="feature" id="features">
+  <div class="feature__grid--split feature__grid">
+    <div class="feature__text reveal">
+      <span class="kicker">Grouped the way you work</span>
+      <h2>One window per project, one tab per session.</h2>
+      <p>
+        Restore AI Windows reads each Claude Code session's working directory
+        and groups them the same way you organize your projects — a
+        <code>~/Sites/&lt;project&gt;</code> window, a tab for each session in
+        it, with the project name shown right in the iTerm badge.
+      </p>
+      <ul class="ticks">
+        <li>Reads the most-recent <code>cwd</code> from every active transcript</li>
+        <li>One iTerm window per project, one tab per session</li>
+        <li>Friendly project name shown in the iTerm badge</li>
+        <li>Skips the trust prompt and auto-picks Resume from summary</li>
+      </ul>
+    </div>
+    <figure class="feature__shot reveal" style="--d:.12s">
+      <div class="window">
+        <div class="window__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span><span class="window__title">Session grouping</span></div>
+        <img src="/assets/screenshots/session-grouping.png" alt="Restore AI Windows grouping restored Claude Code sessions by project into separate iTerm windows." width="900" height="600" loading="eager" onerror="this.parentElement.innerHTML='<div class=&quot;shot-placeholder&quot;><svg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;><rect x=&quot;3&quot; y=&quot;4&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;2&quot;/><path d=&quot;M3 9h18&quot;/></svg><span>Screenshot coming soon</span></div>'" />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ====================== FEATURE 2: GEOMETRY + SPACE ====================== -->
+<section class="feature feature--alt">
+  <div class="feature__grid--split feature__grid feature__grid--reverse">
+    <div class="feature__text reveal">
+      <span class="kicker">Not just reopened — restored</span>
+      <h2>Windows come back at the exact position, size, and Space.</h2>
+      <p>
+        A launchd snapshot agent records each project window's frame and
+        virtual desktop every couple of minutes. On restore, that geometry
+        gets played back — so your layout survives a crash the way you left it,
+        not just as a pile of default-sized windows.
+      </p>
+      <ul class="ticks">
+        <li>Captures position, size, and Space per project window</li>
+        <li>Best-effort Space restore via a compiled CoreGraphics helper</li>
+        <li>Falls back to position + size if Screen Recording isn't granted</li>
+        <li>No manual re-tiling after a reboot</li>
+      </ul>
+    </div>
+    <figure class="feature__shot reveal" style="--d:.12s">
+      <div class="window">
+        <div class="window__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span><span class="window__title">Geometry restore</span></div>
+        <img src="/assets/screenshots/geometry-restore.png" alt="Restore AI Windows restoring window position, size, and virtual desktop for a Claude Code session." width="900" height="600" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;shot-placeholder&quot;><svg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;><path d=&quot;M3 17l5-6 4 3 5-8 4 5&quot;/></svg><span>Screenshot coming soon</span></div>'" />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ====================== FEATURE 3: BROWSER RESTORE ====================== -->
+<section class="feature" id="browser">
+  <div class="feature__grid--split feature__grid">
+    <div class="feature__text reveal">
+      <span class="kicker">Terminal and browser, together</span>
+      <h2>Browser windows come back too — tabs grouped, Space intact.</h2>
+      <p>
+        Alongside your iTerm sessions, Restore AI Windows snapshots your
+        BrowserOS / Chromium windows: their tabs, grouping, geometry, and
+        Space. On restore, it opens one window per saved group and moves it
+        back to where it was — same best-effort Space handling as the terminal
+        side.
+      </p>
+      <ul class="ticks">
+        <li>Works with any Chromium-family browser with AppleScript scripting</li>
+        <li>Tabs stay grouped into their original windows</li>
+        <li><code>--browser</code> flag to restore browser windows only</li>
+        <li><code>RESTORE_SKIP_BROWSER=1</code> to opt out and restore iTerm only</li>
+      </ul>
+    </div>
+    <figure class="feature__shot reveal" style="--d:.12s">
+      <div class="window">
+        <div class="window__bar"><span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span><span class="window__title">Browser restore</span></div>
+        <img src="/assets/screenshots/browser-restore.png" alt="Restore AI Windows reopening browser windows with tabs grouped into their original windows." width="900" height="600" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;shot-placeholder&quot;><svg width=&quot;40&quot; height=&quot;40&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;><rect x=&quot;3&quot; y=&quot;5&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;2&quot;/><path d=&quot;M3 9h18&quot;/></svg><span>Screenshot coming soon</span></div>'" />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ====================== BENTO: SKILL + LAUNCHD + CONTINUE ====================== -->
+<section class="bento reveal" id="how-it-works">
+  <div class="bento__cell bento__cell--wide">
+    <h3>"Restore my sessions" — hands-free</h3>
+    <p>A bundled Claude Code skill runs the restore from inside a session — just say "restore my sessions." No terminal command to remember.</p>
+  </div>
+  <div class="bento__cell bento__cell--accent">
+    <span class="bento__stat">Auto-restore</span>
+    <p>A launchd agent restores your last snapshot automatically at every login — no click required.</p>
+  </div>
+  <div class="bento__cell">
+    <span class="bento__stat">Continues itself</span>
+    <p>Each restored session gets a prompt to summarize and pick up right where it left off.</p>
+  </div>
+  <div class="bento__cell">
+    <span class="bento__stat">Snapshots every 2 min</span>
+    <p>A background launchd agent records active sessions and window geometry, so restore is never far behind.</p>
+  </div>
+</section>
+
+<!-- ====================== REQUIREMENTS ====================== -->
+<section class="requirements" id="requirements">
+  <div class="section-head reveal">
+    <span class="kicker">Requirements</span>
+    <h2>What it needs to run.</h2>
+    <p>One manual step after install: grant Screen Recording so Space restore works.</p>
+  </div>
+  <ul class="req-list reveal">
+    <li>macOS</li>
+    <li>iTerm2</li>
+    <li>Claude CLI on your PATH</li>
+    <li>python3 + Xcode Command Line Tools</li>
+    <li>Screen Recording permission (for Space restore)</li>
+  </ul>
+</section>
+
+<!-- ====================== CTA / DOWNLOAD ====================== -->
+<section class="cta">
+  <div class="cta__inner reveal">
+    <img src="/assets/app-icon.png" alt="" class="cta__icon" width="92" height="92" />
+    <h2>Stop losing your windows to a crash.</h2>
+    <p>
+      Free and open source. Grab the DMG or install from source.
+    </p>
+    <div class="cta__actions">
+      <a class="btn btn--primary" href="/releases/latest" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download DMG
+      </a>
+      <a class="btn btn--ghost" href="https://github.com/s3w47m88/claude-session-restorer" target="_blank" rel="noopener">Open source on GitHub</a>
+    </div>
+    <p class="cta__fine">
+      <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      Free · macOS · MIT licensed
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+  <div class="footer__brand">
+    <img src="/assets/app-icon.png" alt="" width="30" height="30" />
+    <span>Restore AI Windows</span>
+  </div>
+  <p class="footer__tag">iTerm · browser · geometry · Space</p>
+  <p class="footer__meta">
+    A <a href="https://theportlandcompany.com" rel="noopener">The Portland Company</a> product · <a href="https://github.com/s3w47m88/claude-session-restorer" rel="noopener">Open source on GitHub</a> · © <span id="year">2026</span>
+  </p>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>

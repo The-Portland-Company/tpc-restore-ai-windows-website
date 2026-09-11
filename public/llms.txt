@@ -1,0 +1,7 @@
+# Restore AI Windows
+
+> A macOS Dock app and launchd agent that snapshots and restores Claude Code
+> iTerm sessions and browser windows after a crash, restart, or reboot —
+> grouped by project, at their saved position, size, and virtual desktop.
+
+Free and open source. Repo: https://github.com/s3w47m88/claude-session-restorer

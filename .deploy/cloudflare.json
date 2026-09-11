@@ -1,0 +1,10 @@
+{
+  "project": "restore-ai-windows-landing",
+  "account_id": "38d9c1cbb51d83ab247e96dd7685974e",
+  "pages_project": "restore-ai-windows-landing",
+  "domain": "restoreaiwindows.theportlandcompany.com",
+  "token_file": "~/.config/cloudflare/the-portland-company.env",
+  "env_token_var": "CLOUDFLARE_API_TOKEN",
+  "deploy": "npx wrangler pages deploy public --project-name restore-ai-windows-landing --commit-dirty=true",
+  "verify_url": "https://restoreaiwindows.theportlandcompany.com"
+}
