@@ -1,4 +1,4 @@
-# Restore AI Windows
+# TPC Restore AI Windows (by The Portland Company)
 
 > A macOS Dock app and launchd agent that snapshots and restores Claude Code
 > iTerm sessions and browser windows after a crash, restart, or reboot —
