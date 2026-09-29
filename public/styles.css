@@ -319,3 +319,8 @@ section { position: relative; }
   .strip__items { gap: 1.4rem 2rem; }
   .req-list { gap: .5rem; }
 }
+
+/* Official GitHub buttons (buttons.github.io) */
+.gh-buttons{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px;min-height:28px}
+.cta .gh-buttons{justify-content:center}
+.btn__ver{font-size:.78em;opacity:.7;font-weight:500;margin-left:4px}
